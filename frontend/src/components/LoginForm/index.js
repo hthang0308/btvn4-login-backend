@@ -4,7 +4,7 @@ export default function SignUpForm(props) {
 	const backendUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'http://52.8.172.233:3001';
 	const onSubmit = (e) => {
 		e.preventDefault()
-		fetch(`${backendUrl}/signup`, {
+		fetch(`${backendUrl}/sign-up`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
