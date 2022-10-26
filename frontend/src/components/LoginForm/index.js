@@ -1,9 +1,10 @@
 import React from 'react';
 import './index.scss';
 export default function SignUpForm(props) {
+	const backendUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'http://52.8.172.233:3001';
 	const onSubmit = (e) => {
 		e.preventDefault()
-		fetch('http://localhost:3001/sign-up', {
+		fetch(`${backendUrl}/signup`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
