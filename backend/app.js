@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-	res.send("Hello World!");
+	res.send("Welcome to 19120129 - Huỳnh Minh Thắng's Backend");
 });
 
 app.post("/sign-up", (req, res) => {
