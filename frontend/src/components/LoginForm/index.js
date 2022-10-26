@@ -18,7 +18,7 @@ export default function SignUpForm(props) {
 			.then((data) => {
 				console.log(data);
 				if (data.success) {
-					alert('Sign up successfully');
+					alert(data.message);
 				} else {
 					alert('Sign up failed');
 				}
