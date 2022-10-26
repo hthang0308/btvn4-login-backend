@@ -27,7 +27,7 @@ export default function SignUpForm(props) {
 	};
 	return (
 		<form className='signup-form' onSubmit={onSubmit}>
-			<h3 className="signup-form__title">Sign Up</h3>
+			<h3 className="signup-form__title">Sign Up - 19120129</h3>
 			<input className="signup-form__input" name='username' type='text' placeholder="Username" />
 			<input className="signup-form__input" name='password' type='password' placeholder="Password" />
 			<button className="signup-form__button" type='submit'> Signup </button>
