@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 app.post("/sign-up", (req, res) => {
 	res.status(200).send({
 		success: true,
-		message: "User signed up successfully",
+		message: `Sign up successfully with username: ${req.body.username} and password: ${req.body.password}`,
 		data: req.body
 	});
 });
