@@ -12,12 +12,22 @@ app.get("/", (req, res) => {
 	res.send("Welcome to 19120129 - Huỳnh Minh Thắng's Backend");
 });
 
-app.post("/sign-up", (req, res) => {
-	res.status(200).send({
-		success: true,
-		message: `Sign up successfully with username: ${req.body.username} and password: ${req.body.password}`,
-		data: req.body
-	});
+app.post("/login", (req, res) => {
+	if (req.body.username === "admin" && req.body.password === "admin") {
+		res.status(200).send({
+			success: true,
+			message: `Login successfully with username: ${req.body.username} and password: ${req.body.password}`,
+			data: {
+				username: req.body.username,
+				password: req.body.password,
+			},
+		});
+	} else {
+		res.status(400).send({
+			success: false,
+			message: `Login failed`
+		});
+	}
 });
 
 
